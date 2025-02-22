@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  app: 
+    build: .
+    ports:
+      - 5000:5000
+    volumes:
+      - ./src:/src
+
+# Setting enviornment variables
+# https://stackoverflow.com/questions/74866327/oserror-whilst-trying-to-run-a-python-app-inside-a-docker-container-using-appl

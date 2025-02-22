@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  app: 
+    build: .
+    ports:
+      - 5000:5000
+    volumes:
+      - ./src:/src
+      - ${ADC}:/tmp/keys/application_default_credentials.json:ro
+    environment:
+      GOOGLE_APPLICATION_CREDENTIALS: /tmp/keys/application_default_credentials.json
+      GOOGLE_CLOUD_PROJECT: ${PROJECT}
+
+# Setting enviornment variables
+# https://stackoverflow.com/questions/74866327/oserror-whilst-trying-to-run-a-python-app-inside-a-docker-container-using-appl

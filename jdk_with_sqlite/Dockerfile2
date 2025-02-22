@@ -1,0 +1,3 @@
+FROM localhost/jdk21-with-sqlite:latest
+
+CMD ["/bin/sh"]
