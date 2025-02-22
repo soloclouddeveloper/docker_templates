@@ -1,6 +1,13 @@
 docker_templates
 ===============
 
+## Eclipse-Temurin JDK21 / Alpine 3.41 / SQLite 3
+**2025-02-22**
+
+Have SQLite available for Java projects
+
+---
+
 Docker templates for different programming languages
 
 ## Angular
@@ -28,6 +35,7 @@ docker volume create nodemodules
 docker build -t MY_IMAGE_NAME
 docker run --name app -p 4200:4200 -v nodemodules:/src/node_modules  -v .:/src  MY_IMAGE_NAME
 ```
+----
 
 ## Python
 
